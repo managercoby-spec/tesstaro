@@ -1,0 +1,96 @@
+/* ========================================================================= */
+/* التعديل الأول: تعريف الألوان الأساسية لـ StarO (أزرق وأبيض) */
+/* ========================================================================= */
+
+:root {
+  /* ألوانك الأساسية */
+  --staro-blue: #007bff; /* الأزرق الاحترافي */
+  --staro-dark-blue: #0056b3; /* أزرق داكن للتأثير عند المرور */
+  --staro-text-dark: #1f2937; /* للنصوص على الخلفية البيضاء */
+  --staro-border-light: #e0e0e0; /* للحدود الفاتحة */
+
+  /* تغيير الخلفية الرئيسية للموقع إلى الأبيض */
+  color-scheme: light; /* تحديد المظهر الفاتح */
+  background-color: #FFFFFF; /* الخلفية البيضاء */
+  color: var(--staro-text-dark); /* لون النص الأساسي أسود داكن */
+}
+
+/* ========================================================================= */
+/* الكود القديم بعد التعديل ليتناسب مع الهوية الجديدة */
+/* ========================================================================= */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0; /* تم إزالة الـ padding لزيادة مساحة المحتوى */
+  text-align: left; /* تم تغيير المحاذاة لتبدو احترافية أكثر */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* تغيير لون الظل من الأخضر إلى الأزرق الجديد */
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(0, 123, 255, 0.6)); /* استخدام الأزرق */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(0, 123, 255, 0.6)); /* استخدام الأزرق */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* تعديل كروت الفيديو لتتناسب مع الخلفية البيضاء */
+.card {
+  padding: 2em;
+  border-radius: 0.5rem;
+  /* تغيير الحدود والخلفية لتكون أنظف وأقل وضوحاً على الخلفية البيضاء */
+  border: 1px solid var(--staro-border-light); 
+  background-color: #f8f9fa; /* خلفية بيضاء مائلة للرمادي الفاتح */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--staro-blue); /* إظهار اللون الأزرق عند المرور */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1); /* ظل أزرق خفيف */
+}
+
+.read-the-docs {
+  color: var(--staro-text-dark);
+}
+
+/* ========================================================================= */
+/* عناصر إضافية للوحة التحكم (لوحة الإدارة لاحقًا) */
+/* ========================================================================= */
+
+/* مثال لزر Call to Action (CTA) باستخدام اللون الأزرق */
+.cta-button {
+    background-color: var(--staro-blue);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--staro-dark-blue);
+}
